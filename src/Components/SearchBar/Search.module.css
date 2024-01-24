@@ -1,0 +1,32 @@
+.div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+input{
+    outline: none;
+    border-radius: 30px;
+    border: none;
+    height: 35px;
+    width: 400px;
+    padding: 0 15px 0 15px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+
+
+.search{
+    display: flex;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+
+
+}
+

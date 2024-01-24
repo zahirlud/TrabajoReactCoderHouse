@@ -1,0 +1,9 @@
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 50px;
+    background: linear-gradient(to right, rgb(68, 68, 119),rgb(12, 12, 95));
+    height: 100vh;
+}
