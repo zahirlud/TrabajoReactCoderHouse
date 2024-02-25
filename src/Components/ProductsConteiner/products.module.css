@@ -1,0 +1,104 @@
+.container{
+    margin-top: 80px;
+   
+}
+
+.wrapper{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    width: fit-content;
+    margin-left: 30px;
+   
+   margin-bottom: 30px;
+   
+}
+
+
+
+.filterconteiner{
+    background-color: rgba(153, 148, 148, 0.685);
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 250px;
+    height: fit-content; 
+    border: .5px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.842);
+    
+    
+}
+
+.pProduct{
+    color: rgba(255, 255, 255, 0.842);
+   
+    text-align:start;
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 15px;
+   
+}
+
+.wrapP{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.842);
+    font-style: italic;
+    padding-right: 7.5rem;
+    justify-content: space-between;
+}
+
+
+
+
+.link{
+    
+    text-decoration: "underline";
+    color: rgba(255, 255, 255, 0.842);
+    text-align: "center";
+    
+    
+}
+
+.link:hover{
+    color: rgb(160, 153, 153);
+}
+
+
+
+.spanfilter{
+
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.card{
+
+
+  display: flex;
+  margin-left: 70px;
+  justify-content: center;
+  gap: 20px; 
+  max-width: 860px; 
+  flex-wrap: wrap;
+}
+
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+    height: 500px;
+    width: 100%;
+}

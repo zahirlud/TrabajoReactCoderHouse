@@ -5,13 +5,13 @@
     
 }
 
-input{
+.input{
     outline: none;
     border-radius: 30px;
     border: none;
     height: 35px;
     width: 400px;
-    padding: 0 15px 0 15px;
+    padding: 0 35px 0 15px;
     -webkit-appearance: none; 
     -moz-appearance: none; 
     appearance: none;

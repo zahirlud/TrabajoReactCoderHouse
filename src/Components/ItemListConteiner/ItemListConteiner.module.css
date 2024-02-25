@@ -1,9 +1,22 @@
 .div1{
+   
+    height: auto;
+    
+}
+
+.scroll {
     display: flex;
-    justify-content: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgb(126, 116, 116);
+    color: aliceblue;
+    height: 60px;
+    width: 60px;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
     align-items: center;
-    color: rgba(255, 255, 255, 0.842);
-    font-size: 50px;
-    background: linear-gradient(to right, rgb(68, 68, 119),rgb(12, 12, 95));
-    height: 100vh;
+    justify-content: center;
+    cursor: pointer;
+    
 }

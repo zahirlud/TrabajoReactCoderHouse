@@ -1,0 +1,141 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 100px 0 100px 0;
+    
+   
+    
+}
+
+
+
+
+.box{
+    
+    
+    background: linear-gradient(to right, rgb(23, 23, 136), rgb(11, 11, 51));
+    width: 650px;
+    border: 1px solid rgba(255, 255, 255, 0.842);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.842);
+    box-sizing: border-box;
+    padding: 30px 50px;
+    box-shadow: 0 0 20px black;
+}
+
+
+
+.box > h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.divinput1 > input, .divinput2 > input{
+   
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent; 
+    
+    border: none;
+    outline: none;
+    
+    border-bottom: 1px solid rgb(194, 177, 177);
+   
+    padding-block: 0;
+    padding-inline: 0;
+    font-size: 15px;
+    
+    padding-right: 45px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.842);
+
+} 
+
+.divinput1 > input::placeholder, .divinput2 > input::placeholder{
+   color: rgba(255, 255, 255, 0.842);
+}
+
+.divcheck{
+    display: flex;
+    justify-content: space-between;
+   margin-bottom: 20px;
+    
+}
+
+.registroLink {
+    color: rgba(255, 255, 255, 0.842)
+}
+
+
+.divinput2 input[type=number]::-webkit-inner-spin-button, .divinput2 input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+
+}
+
+.divinput2 input[type=date] {
+    -webkit-appearance: none; 
+    appearance: none;
+  }
+  
+  
+.divinput2 input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+.divp{
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+
+
+}
+.divp p > span:hover {
+    text-decoration: underline;
+    
+}
+
+.box > button {
+    height: 45px;
+    width: 100%;
+    border-radius: 40px;
+    cursor: pointer;
+    border-color: none;
+    align-self: center;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px black;
+    font-size: 15px;
+    font-weight: 600;
+   
+    
+}
+
+.divinput1, .divinput2 {
+    width: 100%;
+   
+    position: relative;
+    
+    height: 50px;
+    margin: 30px 0;
+}
+
+.icon1, .icon2 {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+.divinput1 > input:-webkit-autofill,
+.divinput2 > input:-webkit-autofill {
+    
+    -webkit-box-shadow: 0 0 0 30px rgb(11, 11, 51) inset !important; 
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.842) !important; 
+}

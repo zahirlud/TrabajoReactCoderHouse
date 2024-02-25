@@ -1,0 +1,38 @@
+.h2{
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    
+    
+}
+.p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+.divh2{
+    
+    height: 300px;
+    background-color: rgb(221, 225, 226);
+    color: rgb(8, 8, 8);
+    margin-bottom: 20px;
+}
+
+.divbutton{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    font-size: 20px;
+    border: none;
+    color:  rgb(221, 225, 226);
+    border-radius: 8px;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 0 20px black;
+    cursor: pointer;
+    background-color: rgb(12, 12, 95);
+   
+}

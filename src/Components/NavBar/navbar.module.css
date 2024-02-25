@@ -1,14 +1,27 @@
 .div1{
     display: flex;
     width: 100%;
-    background: linear-gradient(to right, rgb(68, 68, 119),rgb(12, 12, 95));
+    
+   
+    
     justify-content: space-between;
     height: 70px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.842);
     align-items: center;
+    
 }
 
-
+.linkp{
+    color: rgba(255, 255, 255, 0.842);
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    appearance: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+}
 .div2{
     display: flex;
     align-items: center;
@@ -25,3 +38,6 @@
     font-size: 40px;
 }
 
+.linkp:hover{
+    color: rgba(255, 255, 255, 0.562);
+}
