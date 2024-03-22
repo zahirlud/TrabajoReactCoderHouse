@@ -1,22 +1,28 @@
 .spanProfile{
-    font-size: 20px;
-    cursor: pointer;
+    color: rgba(255, 255, 255, 0.842);
+    text-decoration: none;
+    font-size: 15px;
+    
 
 }
 
-.aProfile{
+/* .aProfile{
     color: rgba(255, 255, 255, 0.842);
     text-decoration: none;
     font-size: 15px;
     margin-left: 5px;
     
-}
+} */
 
 .iconUser{
     color: rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+
 }
 
-.spanProfile:hover .aProfile,.spanProfile:hover > .iconUser{
+.spanProfile:hover, .iconUser:hover {
     color: rgba(255, 255, 255, 0.562);
     
 }

@@ -1,0 +1,41 @@
+
+
+.wrapper{
+    display: flex;
+    max-width: 800px;
+    background-color: #343434;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.842);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.842);
+    padding-right: 1rem;
+    color:  rgba(255, 255, 255, 0.842);
+   
+   
+
+}
+
+.wrapper img{
+    width: 80px;
+    height: 80px;
+}
+.wrapper > span{
+    min-width: 70px;
+    text-align: center;
+}
+
+.wrapper button{
+    background-color: rgba(209, 14, 14, 0.952);
+    color: rgba(255, 255, 255, 0.842);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.title{
+    width: 260px;
+    max-height: 80px;
+}
+

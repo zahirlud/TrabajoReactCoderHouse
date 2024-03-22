@@ -1,17 +1,17 @@
+import {getFirestore} from "firebase/firestore"
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
+// TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfHBsnEcfcK2K2wix9RnyisQNJpmguCWw",
-  authDomain: "coderhouse-proyecto-98543.firebaseapp.com",
-  projectId: "coderhouse-proyecto-98543",
-  storageBucket: "coderhouse-proyecto-98543.appspot.com",
-  messagingSenderId: "682206110556",
-  appId: "1:682206110556:web:f79da8c651408a90e51799"
+  apiKey: "AIzaSyCf4abQBWwkJVrUrVWnv4_q16-0Ks_gNEQ",
+  authDomain: "base-de-datos-64948.firebaseapp.com",
+  projectId: "base-de-datos-64948",
+  storageBucket: "base-de-datos-64948.appspot.com",
+  messagingSenderId: "1011533918563",
+  appId: "1:1011533918563:web:457af57277a536b82ba356"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-const appFirebase = initializeApp(firebaseConfig);
-
-
-export const auth = getAuth(appFirebase)
+export const db = getFirestore(app);

@@ -1,40 +1,40 @@
-import { useEffect, useState } from "react";
 import ProductView from "../ProductView/ProductView";
 import styles from "./PVContainer.module.css";
-import { getProductSingle } from "../../Services/Products";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../../config/firebase";
 
 const ProductViewContainer = () => {
-  const [products, setProducts] = useState(null);
+  const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const { productId } = useParams();
 
+  const getProductDB = (productId) => {
+    const productRef = doc(db, "products", productId);
+
+    getDoc(productRef).then((res) => {
+      const product = {
+        id: res.id,
+        ...res.data(),
+      };
+      setItem(product);
+      setLoading(false);
+      console.log(product);
+    });
+  };
+
   useEffect(() => {
     setLoading(true);
-    getProductSingle(productId)
-      .then((res) => {
-        setProducts(res);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(true);
-        console.error("Error", err);
-      });
+    getProductDB(productId);
   }, []);
 
-  return (
-    <div className={styles.container}>
-      {products ? (
-        <ProductView {...products} />
-      ) : loading ? (
-        <div className={styles.load}>Cargando producto...</div>
-      ) : error ? (
-        <p>Error al cargar el producto.</p>
-      ) : null}
-    </div>
-  );
+  if (loading) {
+    return <div className={styles.load}>Cargando producto...</div>;
+  }
+
+  return <div className={styles.container}>{<ProductView {...item} />}</div>;
 };
 
 export default ProductViewContainer;

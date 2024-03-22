@@ -2,11 +2,11 @@ import styles from "./Card.module.css";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ id, title, price, images }) => {
+const ProductCard = ({ id, name, price, img }) => {
   return (
     <div className={styles.divcard} key={id}>
       <div className={styles.divimg}>
-        <img src={images[0]} alt={title} className={styles.cardimg} />
+        <img src={img} alt={name} className={styles.cardimg} />
       </div>
       <div
         style={{
@@ -23,7 +23,7 @@ const ProductCard = ({ id, title, price, images }) => {
             minHeight: "125px",
           }}
         >
-          <h2 style={{ textAlign: "center", fontSize: "15px" }}>{title}</h2>
+          <h2 style={{ textAlign: "center", fontSize: "15px" }}>{name}</h2>
 
           <p style={{ textAlign: "center", fontSize: "12px" }}>
             Descripción:{" "}

@@ -49,8 +49,6 @@ const CategoriesConteiner = () => {
     }
   }, [categoryId]);
 
-  console.log(categories);
-
   if (loading) {
     return <div className={styles.load}>Cargando categorias...</div>;
   }
@@ -84,14 +82,17 @@ const CategoriesConteiner = () => {
           {!categoryId
             ? categories.map((category) => (
                 <Link
+                  key={category.id}
                   to={`/categories/${category.id}/products`}
                   style={{ textDecoration: "none", color: "inherit" }}
                   onClick={() => setCategoryName(category.name)}
                 >
-                  <CategoriesCard {...category} />
+                  <CategoriesCard key={category.id} {...category} />
                 </Link>
               ))
-            : products.map((product) => <ProductCard {...product} />)}
+            : products.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
         </div>
       </div>
     </>

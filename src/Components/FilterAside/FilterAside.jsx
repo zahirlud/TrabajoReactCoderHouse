@@ -6,17 +6,17 @@ const FilterAside = ({ categories, setCategoryName }) => {
       <span className={styles.spanfilter}>Filtrar</span>
       <div className={styles.divinputs}>
         <ul>
-          {categories.map((category) => {
-            return (
-              <Link
-                to={`/categories/${category.id}/products`}
-                style={{ textDecoration: "none", color: "inherit" }}
-                onClick={() => setCategoryName(category.name)}
-              >
-                <li key={category.id}>{category.name}</li>
-              </Link>
-            );
-          })}
+          {categories.map((category, index) => (
+            <Link
+              // Asegúrate de tener una clave única
+              key={index}
+              to={`/categories/${index}/products`}
+              style={{ textDecoration: "none", color: "inherit" }}
+              onClick={() => setCategoryName(category)}
+            >
+              <li>{category}</li>
+            </Link>
+          ))}
         </ul>
       </div>
     </div>

@@ -7,9 +7,7 @@ const ProfileIcon = () => {
     <>
       <span className={styles.spanProfile}>
         <FontAwesomeIcon icon={faUser} className={styles.iconUser} />
-        <a className={styles.aProfile} href="">
-          Mi Perfil
-        </a>
+        Mi Perfil
       </span>
     </>
   );

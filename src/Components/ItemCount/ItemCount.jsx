@@ -1,12 +1,19 @@
 import { useState } from "react";
 import styles from "./ItemCount.module.css";
 
-const ItemCount = () => {
-  const [count, setCount] = useState(0);
+const ItemCount = ({ onAdd }) => {
+  const [count, setCount] = useState(1);
 
   return (
     <div className={styles.divbutton}>
-      <button className={styles.boton1}>COMPRAR</button>
+      <button
+        className={styles.boton1}
+        onClick={() => {
+          onAdd(count);
+        }}
+      >
+        AGREGAR
+      </button>
       <div>
         <button
           className={styles.boton2}

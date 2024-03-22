@@ -2,15 +2,35 @@ import styles from "./ProductView.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTruckFast, faShop } from "@fortawesome/free-solid-svg-icons";
 import ItemCount from "../ItemCount/ItemCount";
+import { useCart } from "../../Context/CartContext";
+import Swal from "sweetalert2";
 
-const ProductView = ({ id, title, price, description, images }) => {
+const ProductView = ({ id, name, price, description, img }) => {
+  const { addItem } = useCart();
+  const onAdd = (quantity) => {
+    const item = {
+      id,
+      name,
+      price,
+      img,
+    };
+    addItem(item, quantity);
+    Swal.fire({
+      icon: "success",
+      title:
+        quantity > 1
+          ? `Se agregaron ${quantity} productos al carrito`
+          : `Se agregó ${quantity} producto al carrito`,
+    });
+  };
+
   return (
     <div className={styles.cardContainer} key={id}>
       <div className={styles.divimg}>
-        <img src={images[0]} alt={title} className={styles.img} />
+        <img src={img} alt={name} className={styles.img} />
       </div>
       <div className={styles.divdescription}>
-        <h3>{title}</h3>
+        <h3>{name}</h3>
         <p>Descripción: {description}</p>
         <div>
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -21,7 +41,7 @@ const ProductView = ({ id, title, price, description, images }) => {
           </div>
           <strong style={{ fontSize: "40px" }}>${price}</strong>
         </div>
-        <ItemCount />
+        <ItemCount onAdd={onAdd} />
 
         <div className={styles.divenvio}>
           <p>
